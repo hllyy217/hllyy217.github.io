@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+
+        }
+        .all{
+            width: 500px;
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+        }
+        .wrap{
+         width: 2500px;
+            position: absolute;
+            left: 0;
+        }
+        .wrap img{
+            width: 500px;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+ <div class="all">
+     <div class="wrap">
+         <img src="image/1.jpg">
+         <img src="image/2.jpg">
+         <img src="image/3.jpg">
+         <img src="image/4.jpg">
+         <img src="image/1.jpg">
+     </div>
+ </div>
+<script>
+    var wrap=document.getElementsByClassName("wrap")[0];
+
+    num=0;
+
+    setInterval(function(){
+        num++;
+        var snum=0;
+        all=0;
+        setInterval(function () {
+           snum++;
+           all=all+snum*20;
+           if(snum==20){
+               all=0;
+           }
+           wrap.style.left=-all+"px";
+        },100)
+    },3000)
+</script>
+</body>
+</html>

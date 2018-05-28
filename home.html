@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet"  href="home.css">
+
+    <script src="jquery-3.2.1.min.js"></script>
     <script src="home.js"></script>
 </head>
-<body>
+<body >
  <div id="header">
      <div id="NIE-topBar" >
          <div id="NIE-mian " class="all_with" >
@@ -19,12 +21,147 @@
                      <div class="NIE-catalogue NIEtop">
                          <div class="catalogue-left">
                              <b>客户端游戏</b>
+                             <div class="moregame">更多热门端游</div>
+                             <div class="catalogueLeft">
+                                 <h3>角色扮演</h3>
+                                 <ul class="catelist">
+                                     <li><a>梦幻西游电脑版<span></span></a></li>
+                                     <li><a>大话2经典版<span></span></a></li>
+                                     <li><a>天下3<span></span></a></li>
+                                     <li><a>新倩女幽魂<span></span></a>
+                                     <li><a>逆水寒<span></span></a></li>
+                                     <li><a>天谕<span></span></a></li>
+                                     <li><a>龙魂时刻<span></span></a></li>
+                                     <li><a>泰亚史诗<span></span></a>
+                                     <li><a>大话免费版<span></span></a></li>
+                                     <li><a>新大话3经典版<span></span></a></li>
+                                     <li><a>新大话3免费版<span></span></a>
+                                     <li><a>镇魔曲<span></span></a></li>
+                                     <li><a>大唐无双<span></span></a></li>
+                                     <li><a>武魂2<span></span></a></li>
+                                     <li><a>魔兽世界<span></span></a></li>
+                                 </ul>
+                             </div>
+                             <div class="catalogueRight">
+                                 <h3>竞技/休闲</h3>
+                                 <ul class="catelist catelist1">
+                                     <li><a>我的世界<span></span></a></li>
+                                     <li><a>守望先锋<span></span></a></li>
+                                     <li><a>突击英雄<span></span></a></li>
+                                     <li><a>无尽战区<span></span></a>
+                                     <li><a>战意<span></span></a></li>
+                                     <li><a>秘境对决</a></li>
+                                     <li><a>风暴英雄</a></li>
+                                     <li><a>星际争霸Ⅱ</a>
+                                     <li><a>英雄三国</a></li>
+                                     <li><a>炉石传说</a></li>
+                                 </ul>
+                             </div>
+
                          </div>
                          <div class="catalogue-middle">
+                             <div class="moregame more1">更多热门手游</div>
+                             <div class="diver"></div>
                              <b>手机游戏</b>
+                             <div class="catalogueLeft catalogueLeft1 ">
+                                 <h3>热门推荐</h3>
+                                 <ul class="catelist catelistLeft">
+                                     <li><a>梦幻西游手游<span></span></a></li>
+                                     <li><a>大话西游手游<span></span></a></li>
+                                     <li><a>倩女幽魂手游<span></span></a></li>
+                                     <li><a>阴阳师<span></span></a>
+                                     <li><a>决战！平安京<span></span></a></li>
+                                     <li><a>楚留香<span></span></a></li>
+                                     <li><a>率土之滨<span></span></a></li>
+                                     <li><a>天下手游<span></span></a>
+                                     <li><a>镇魔曲手游<span></span></a></li>
+                                     <li><a>三国如龙转<span></span></a></li>
+                                     <li><a>大唐无双唯美篇<span></span></a>
+                                     <li><a>光明大陆<span></span></a></li>
+                                     <li><a>功夫熊猫3手游<span></span></a></li>
+                                 </ul>
+                             </div>
+                             <div class="catalogueLeft catalogueLeft1 Lefcataloguet2">
+                                 <h3>新品推荐</h3>
+                                 <ul class="catelist catelistLeft catelist2 catelistWidth1" >
+                                     <li><a>我的世界Minecraft<span></span></a></li>
+                                     <li><a>花与剑<span></span></a></li>
+                                     <li><a>sky光遇<span></span></a></li>
+                                     <li><a>一起优诺<span></span></a>
+                                     <li><a>实况足球<span></span></a></li>
+                                     <li><a>终结者2官方手游<span></span></a></li>
+                                     <li><a>荒野行动<span></span></a></li>
+                                     <li><a>孤岛先锋<span></span></a>
+                                     <li><a>舰无虚发：暗星<span></span></a></li>
+                                     <li><a>明日之后<span></span></a></li>
+                                     <li><a>战舰世界闪击战<span></span></a>
+                                     <li><a>坦克时间闪击战<span></span></a></li>
+                                     <li><a>战争怒吼<span></span></a></li>
+                                     <li><a>实况：王者集结<span></span></a></li>
+                                     <li><a>权利与纷争<span></span></a></li>
+                                     <li><a>天启联盟<span></span></a></li>
+                                 </ul>
+                                 <ul class="catelist catelistLeft catelist2 catelistWidth2">
+                                     <li><a>叛逆性百万亚瑟王<span></span></a></li>
+                                     <li><a>泰坦黎明<span></span></a></li>
+                                     <li><a>战国志<span></span></a></li>
+                                     <li><a>边境之旅<span></span></a>
+                                     <li><a>泡泡趴<span></span></a></li>
+                                     <li><a>魔法禁书目录<span></span></a></li>
+                                     <li><a>非人学园<span></span></a></li>
+                                     <li><a>神谕文明<span></span></a>
+                                     <li><a>悠梦YuME<span></span></a></li>
+                                     <li><a>超物理基斗<span></span></a></li>
+                                     <li><a>第五人格<span></span></a>
+                                     <li><a>永远的七日之都<span></span></a></li>
+                                     <li><a>流星蝴蝶剑<span></span></a></li>
+                                     <li><a>猎魂觉醒<span></span></a></li>
+                                     <li><a>玩具大乱斗<span></span></a></li>
+                                     <li><a>海岛纪元<span></span></a></li>
+                                 </ul>
+                                 <ul class="catelist catelistLeft catelist2 catelistWidth3">
+                                     <li><a>我守护的一切</a></li>
+                                     <li><a>魂之轨迹</a></li>
+                                     <li><a>秘境对决</a></li>
+                                     <li><a>九州海上牧云记</a>
+                                     <li><a>影之诗</a></li>
+                                     <li><a>轩辕剑龙舞云山</a></li>
+                                     <li><a>暴走小飞机</a></li>
+                                     <li><a>猪场怼怼乐</a>
+                                     <li><a>网易四川棋牌</a></li>
+                                     <li><a>潮人篮球</a></li>
+                                     <li><a>秘宝猎人:王牌猎手</a>
+                                     <li><a>迷雾求生</a></li>
+                                     <li><a>三国诛将录</a></li>
+                                     <li><a>重装突击</a></li>
+                                     <li><a>元气战姬学院</a></li>
+                                     <li><a>格罗亚传奇</a></li>
+                                 </ul>
+
+                             </div>
                          </div>
                          <div class="catalogue-right">
                              <b>游戏辅助</b>
+
+                             <div class="catalogueLeft">
+                                 <ul class="catelist ">
+                                     <li><a>游品味</a></li>
+                                     <li><a>网易MuMu</a></li>
+                                     <li><a>奇遇俱乐部</a></li>
+                                     <li><a>网易BUFF</a>
+                                     <li><a>网易游戏印象</a></li>
+                                     <li><a>网易游戏平台</a></li>
+                                     <li><a>网易游戏助手</a></li>
+                                     <li><a>手机将军令</a>
+                                     <li><a>将军令</a></li>
+                                     <li><a>游戏知道</a></li>
+                                     <li><a>藏宝阁</a>
+                                     <li><a>网易CC</a></li>
+                                     <li><a>客服中心</a></li>
+                                     <li><a>自助百宝箱</a></li>
+                                     <li><a>网易UU加速器</a></li>
+                                 </ul>
+                             </div>
                          </div>
                      </div>
                      <script>
@@ -32,7 +169,7 @@
                          var NIEtop=document.getElementsByClassName("NIEtop")[0];
                          NIEcontent.onmousemove=function(){
                              NIEtop.style="z-index:999999";
-                             NIEtop.style="height:600px";
+                             NIEtop.style="height:480px";
                              NIEtop.style.transition="height 0.5s";
                          }
                          NIEcontent.onmouseleave=function(){
@@ -58,17 +195,19 @@
              <div class="official"><a>进入官网</a></div>
              <div class="share_right"><span>分享到：</span>
                  <ul class="share-img">
-                     <li><a class="svgimg"><svg t="1525690722180" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="9076" xmlns:xlink="http://www.w3.org/1999/xlink" width="22" height="22"><defs><style type="text/css"></style></defs><path d="M512 0c-282.784 0-512 229.248-512 512s229.248 512 512 512 512-229.248 512-512-229.248-512-512-512zM393.12 670.048c-39.264 0-76.672-6.816-110.88-19.04l-96.032 64.224 0-3.872 31.136-92.768c-69.984-46.016-115.392-118.592-115.392-200.512 0-139.136 130.368-251.968 291.168-251.968 146.56 0 267.456 93.792 287.808 215.744-61.184 1.76-288.192 26.048-263.232 287.104-8.128 0.576-16.288 1.088-24.576 1.088zM820.576 778.08l19.808 71.04-73.568-44.352c-28.544 10.176-59.776 15.872-92.544 15.872-135.04 0-244.512-95.168-244.512-212.608s109.472-212.608 244.512-212.608c135.04 0 244.512 95.168 244.512 212.608 0 69.664-38.688 131.264-98.176 170.048zM328.352 335.84c0 22.176-17.984 40.16-40.16 40.16s-40.16-17.984-40.16-40.16c0-22.176 17.984-40.16 40.16-40.16s40.16 17.984 40.16 40.16zM537.248 335.84c0 22.176-17.984 40.16-40.16 40.16s-40.16-17.984-40.16-40.16c0-22.176 17.984-40.16 40.16-40.16s40.16 17.984 40.16 40.16zM639.264 544.704c0 22.176-17.984 40.16-40.16 40.16s-40.16-17.984-40.16-40.16c0-22.176 17.984-40.16 40.16-40.16s40.16 17.984 40.16 40.16zM800.544 544.704c0 22.176-17.984 40.16-40.16 40.16s-40.16-17.984-40.16-40.16c0-22.176 17.984-40.16 40.16-40.16s40.16 17.984 40.16 40.16z" fill="#9E1414" p-id="9077"></path></svg></a></li>
-                     <li><a class="svgimg"><svg t="1525689443230" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6026" xmlns:xlink="http://www.w3.org/1999/xlink" width="22" height="22"><defs><style type="text/css"></style></defs><path d="M521.678 28.512c-267.808 0-484.979 217.090-484.979 484.979s217.090 484.979 484.979 484.979c267.808 0 484.979-217.090 484.979-484.979s-217.090-484.979-484.979-484.979zM788.614 836.947c-133.951 59.778-304.591 12.422-378.727-13.722-58.202-18.066-109.54-51.658-149.458-95.745-0.996-0.582-2.115-0.914-3.116-1.468 0.621 0.005 1.263 0.004 1.98 0.208-53.275-59.477-85.708-137.977-85.708-224.028 0-185.723 150.517-336.196 336.18-336.196 185.682 0 336.18 150.517 336.18 336.196 0 119.473-62.356 224.283-156.277 283.881 8.39 10.521 33.034 32.927 99.031 50.907zM675.788 552.381l-0.002-0.208c4.893-16.043 7.553-33.034 7.553-50.571 0-95.745-77.574-173.347-173.323-173.347s-173.347 77.574-173.347 173.347c0 62.412 33.121 116.977 82.604 147.477l-1.566 0.327c-26.512 47.065-76.892 78.901-134.765 78.901-8.057 0-15.883-0.876-23.632-2.113 0.372 0.397 0.857 0.857 1.209 1.263 40.494 21.276 86.543 33.498 135.498 33.498 132.278 0 243.917-87.98 279.812-208.605z" fill="#9E1414" p-id="6027"></path></svg></a></li>
-                     <li><a class="svgimg"><svg t="1525689547103" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6842" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24"><defs><style type="text/css"></style></defs><path d="M468.948485 567.226812c-9.943466 0-18.006096 8.194636-18.006096 18.296715 0 10.104125 8.06263 18.294668 18.006096 18.294668 9.955746 0 18.022469-8.190543 18.022469-18.294668C486.96993 575.420425 478.904231 567.226812 468.948485 567.226812z" p-id="6843" fill="#9E1414"></path><path d="M452.398554 476.909807c-98.516758 13.845333-170.968883 77.792761-161.829735 142.832056 9.140171 65.037249 96.416933 106.535385 194.927551 92.690052 98.528014-13.847379 170.982186-77.794807 161.837922-142.830009C638.192074 504.561587 550.926568 463.062428 452.398554 476.909807zM467.305055 694.718485c-58.59042 11.386328-113.90626-19.583011-123.547851-69.174476-9.639544-49.593512 30.04734-99.029434 88.642876-110.417809 58.599629-11.392468 113.913423 19.576871 123.552967 69.168336C565.595662 633.889071 525.901615 683.324994 467.305055 694.718485z" p-id="6844" fill="#9E1414"></path><path d="M510.976694 62.34493c-248.313435 0-449.610044 201.298656-449.610044 449.610044 0 248.313435 201.296609 449.610044 449.610044 449.610044 248.311389 0 449.610044-201.296609 449.610044-449.610044C960.586738 263.642562 759.288083 62.34493 510.976694 62.34493zM477.958696 768.477372c-154.202011 0-279.211143-81.914638-279.211143-182.953845 0-101.041254 187.218986-260.579807 258.840186-260.579807 30.0412 0 88.965218 22.73991 47.731094 94.771457-2.874467 5.03876 92.997044-41.87676 145.405671-11.021008 52.408627 30.859845 0 80.45131 0 85.959767 0 5.510504 105.253182 5.510504 105.253182 90.86959C755.976664 686.562734 632.163777 768.477372 477.958696 768.477372zM697.381128 394.368906c-17.365506-20.936845-53.06559-16.07921-53.06559-16.07921-7.460925 0.217964-13.239536-5.201465-13.239536-12.426007l0-5.106298c0-7.191796 5.789866-13.956873 12.923334-15.045671 0 0 42.533722-10.854209 75.083046 18.900465 32.544207 29.756721 18.596544 84.040045 18.596544 84.040045-1.168616 7.275707-8.170077 12.936637-15.394618 12.936637l-11.834536 0c-7.129374 0-11.384281-5.557576-9.298783-12.416797C701.149964 449.173093 714.742541 415.309844 697.381128 394.368906zM820.23313 465.303468c-1.170662 10.789741-11.229762 19.430538-22.107507 19.430538l-8.351202 0c-10.945283 0-18.364253-8.668427-16.721847-19.35993 0 0 15.470343-65.494667-20.334117-117.691469-35.806507-52.194756-119.870088-43.272549-119.870088-43.272549-11.086499 0.190335-19.780509-8.082072-19.780509-18.912745l0-9.6815c0-10.865465 8.731872-19.783579 19.504216-20.001543 0 0 87.599104-8.011464 147.270135 49.293683C839.514265 362.412077 820.23313 465.303468 820.23313 465.303468z" p-id="6845" fill="#9E1414"></path><path d="M404.399353 595.809801c-18.032702 8.408507-27.458375 26.359344-21.053502 40.098253 6.402827 13.735839 26.216081 18.049075 44.249807 9.643638 18.038842-8.408507 27.456329-26.359344 21.058618-40.098253C442.24531 591.717599 422.434102 587.398224 404.399353 595.809801z" p-id="6846" fill="#9E1414"></path></svg></a></li>
-                     <li><a class="svgimg"><svg t="1525689921163" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7765" xmlns:xlink="http://www.w3.org/1999/xlink" width="22" height="22"><defs><style type="text/css"></style></defs><path d="M698.280851 403.06383H342.876596l233.940425 40.034042-251.370212 205.072341h381.548936l-225.497873-48.748936 216.782979-196.357447z" fill="#9E1414" p-id="7766"></path><path d="M512 0a512 512 0 1 0 512 512A512 512 0 0 0 512 0z m332.8 420.221277l-130.178723 108.93617 43.302127 277.787234c-8.714894 8.714894-8.987234 8.714894-17.702127 8.714893l-225.770213-138.893617-226.314894 138.893617c-17.429787 0-19.06383 0-19.06383-8.714893l31.046809-277.787234-136.170213-121.46383-47.114893-31.86383h-13.344681v-1.361702l13.344681 1.361702h269.34468l34.587234-61.821276L507.370213 130.723404h17.429787l95.319149 183.285107 34.587234 61.821276h234.212766c8.714894 0 8.714894-5.174468 8.714894 3.540426z" fill="#9E1414" p-id="7767"></path></svg></a></li>
-                     <li><a class="svgimg"><svg t="1525688940741" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5518" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="21"><defs><style type="text/css"></style></defs><path d="M512 0C229.376 0 0 229.376 0 512s229.376 512 512 512 512-229.376 512-512S794.624 0 512 0z m320.512 576.512h-256v256H448.512v-256h-256V448.512h256v-256h128v256h256v128z" p-id="5519" fill="#9E1414"></path></svg></a></li>
-                 </ul>
+                    <li><a class="svgimg"><i class="iconfont svgiconfont">&#xe601;</i></a></li>
+                     <li><a class="svgimg"><i class="iconfont svgiconfont">&#xe600;</i></a></li>
+                     <li><a class="svgimg"><i class="iconfont svgiconfont">&#xe626;</i></a></li>
+                     <li><a class="svgimg"><i class="iconfont svgiconfont">&#xe60b;</i></a></li>
+                     <li><a class="svgimg"><i class="iconfont svgiconfont">&#xe602;</i></a></li>
+                   </ul>
+                 <script>
+                 </script>
              </div>
          </div>
      </div>
  </div>
- <div id="wrp">
+ <div id="wrap">
      <div id="first-page">
          <div class="aside content">
              <img src="image/content.png">
@@ -101,34 +240,187 @@
                      <div class="listone">
                          <h1>01&nbsp;签到豪礼</h1>
                          <div class="line"></div>
+                         <div class="listonetext">
+                             <p>创建游戏角色7日内，玩家登陆即可获得对应奖励</p>
+                             <table>
+                                 <tr>
+                                     <td>1天</td>
+                                     <td>炽天使之羽毛*50</td>
+                                 </tr>
+                                 <tr>
+                                     <td>2天</td>
+                                     <td>英雄品质武器召唤券*1</td>
+                                 </tr>
+                                 <tr>
+                                     <td>3天</td>
+                                     <td>扫荡券*100</td>
+                                 </tr>
+                                 <tr>
+                                     <td>4天</td>
+                                     <td>钻石*150</td>
+                                 </tr>
+                                 <tr>
+                                     <td>5天</td>
+                                     <td>英雄品质防具召唤券*1</td>
+                                 </tr>
+                                 <tr>
+                                     <td>6天</td>
+                                     <td>经验加成卡*50</td>
+                                 </tr>
+                                 <tr>
+                                     <td>7天</td>
+                                     <td>史诗品质防具召唤券*1,史诗品质饰品召唤券*1</td>
+                                 </tr>
+                             </table>
+                             <p>注：炽天使羽毛为游戏商城代币，可购买游戏商城物品；召唤券，使用可直接获得相应品质的装备。</p>
+                         </div>
+
                      </div>
                      <div class="listone">
                          <h1>02&nbsp;首充大奖</h1>
                          <div class="line"></div>
+                         <div class="listtowtext">
+                             <p>玩家首次充值任意值，即可获得豪华奖励：</p>
+                             <div id="listtextp">
+                               <p>道具加成卡*10</p>
+                               <p>经验加成卡*10</p>
+                               <p>金币加成卡*10</p>
+                               <p>史诗品质饰品召唤券*1</p>
+                             </div>
+                             <p class="spantextone">
+                               注：加成卡：探索冒险副本时使用，会增加相应物品的掉落；召唤券，使用可直接获得相应品质的装备。
+                             </p>
+                             <p class="spantextone1">
+                                 每次充值均有额外钻石赠送。首次充值，额外钻石双倍赠送。
+                             </p>
+                             <table>
+                                <tr>
+                                    <td>6元</td>
+                                    <td>充值6元，可购买60钻石</td>
+                                </tr>
+                                 <tr>
+                                     <td>30元</td>
+                                     <td>充值30元，可购买300钻石。首次充值可多获得60钻石，以后每次购买可多获得30钻石。</td>
+                                 </tr>
+                                 <tr>
+                                     <td>60元</td>
+                                     <td>充值60元，可购买600钻石。首次充值可多获得160钻石，以后每次购买可多获得80钻石。</td>
+                                 </tr>
+                                 <tr>
+                                     <td>128元</td>
+                                     <td>充值128元，可购买1280钻石。首次充值可多获得400钻石，以后每次购买可多获得200钻石。</td>
+                                 </tr>
+                                 <tr>
+                                     <td>288元</td>
+                                     <td>充值288元，可购买2880钻石。首次充值可多获得1000钻石，以后每次购买可多获得500钻石。</td>
+                                 </tr>
+                                 <tr>
+                                     <td>648元</td>
+                                     <td>充值648元，可购买6480钻石。首次充值可多获得3200钻石，以后每次购买可多获得1600钻石。</td>
+                                 </tr>
+                             </table>
+                         </div>
                      </div>
                      <div class="listone">
                          <h1>03&nbsp;轻松升级</h1>
                          <div class="line"></div>
+                         <div class="listonetext">
+                             <p>创建游戏角色7日内，玩家登陆即可获得对应奖励</p>
+                             <table>
+                                 <tr>
+                                     <td>20级</td>
+                                     <td>200钻</td>
+                                 </tr>
+                                 <tr>
+                                     <td>30级</td>
+                                     <td>500钻</td>
+                                 </tr>
+                                 <tr>
+                                     <td>40级</td>
+                                     <td>1000钻</td>
+                                 </tr>
+                                 <tr>
+                                     <td>45级</td>
+                                     <td>1300钻</td>
+                                 </tr>
+                                 <tr>
+                                     <td>50级</td>
+                                     <td>1800钻</td>
+                                 </tr>
+                                 <tr>
+                                     <td>55级</td>
+                                     <td>2000钻</td>
+                                 </tr>
+                                 <tr>
+                                     <td>60级</td>
+                                     <td>2000钻</td>
+                                 </tr>
+                             </table>
+                         </div>
                      </div>
                      <div class="listone">
                          <h1>04&nbsp;史诗翅膀</h1>
                          <div class="line"></div>
+                         <div class="listonetext">
+                             <div class="listfour">
+                                 <p>助力英雄守护之路，公测专属翅膀礼包，购买礼包可获得【荣誉、纯洁、权势】三种翅膀中的一对，翅膀为史诗品质及以上</p>
+                                 <div class="listimg">
+                                     <img src="image/chibang01_a61c87d.jpg">
+                                 </div>
+                                 <div class="listimg">
+                                     <img src="image/chibang02_3b03c6f.jpg">
+                                 </div>
+                             </div>
+
+                         </div>
                      </div>
                      <div class="listone">
                          <h1>05&nbsp;限定时装</h1>
                          <div class="line"></div>
+                         <div class="listonetext">
+                             <div class="listfour">
+                                 <p>国服限定龙腾时装，购买相应礼包可获得中国版独有的史诗品质龙腾时装一套（共4件）</p>
+                                 <div class="listimg listimg1">
+                                     <img src="image/picture-1_1700348.png" width="700">
+                                 </div>
+                                 <p>新手7日内，累计充值一定额度，还有永恒品质龙腾时装一套（4件），专属鎏金版外观</p>
+                                 <div class="listimg listimg1">
+                                     <img src="image/picture-2_1a20029.png" width="700">
+                                 </div>
+                             </div>
+
+                         </div>
                      </div>
                      <div class="listone">
                          <h1>06&nbsp;珍惜披风</h1>
                          <div class="line"></div>
+                         <div class="  listonetext1">
+                             <div class="listfour lsitfour1">
+                                 <p>独有披风礼包，购买礼包可获得【荣誉、纯洁、权势】三种披风中的一件，披风为史诗品质及以上。</p>
+                                 <div class="listimg listimg2">
+                                     <img src="image/pifeng_06006f2.png" width="495">
+                                 </div>
+                             </div>
+
+                         </div>
                      </div>
                      <div class="listone">
                          <h1>07&nbsp;永久承诺</h1>
                          <div class="line"></div>
+                         <div class="listonetext7">
+                             <p>创建游戏角色7日内，玩家登陆即可获得对应奖励</p>
+                             <p>还有钻石月卡和冒险点月卡可供玩家选购~~</p>
+                             <p>购买钻石月卡，连续30天，每日可领取100钻石；</p>
+                             <p>购买钻石月卡，连续30天，每日可领取100钻石；</p>
+                         </div>
                      </div>
                      <div class="listone">
                          <h1>08&nbsp;官微大礼</h1>
                          <div class="line"></div>
+                         <div class="listonetext8">
+                             <p>扫描关注官方公众号，更多福利惊喜！</p>
+                             <img src="image/qrcode_577040c.jpg">
+                         </div>
                      </div>
                  </div>
              </div>
@@ -184,24 +476,37 @@
      <div id="fourth-page">
        <div class="fiveImg">
        </div>
-         <div class="small">
-             <a class="smallone smallAll " date="0" judge="0" uage="0">
-                 <img src="image/selected_9abb014.png">
-             </a>
-             <a class="smalltow smallAll " date="1" judge="0" uage="0">
-                 <img src="image/selected_9abb014.png">
-             </a>
-             <a class="smallthree smallAll " date="2" judge="0" uage="0">
-                 <img src="image/selected_9abb014.png">
-             </a>
-             <a class="smallfour smallAll " date="3" judge="0" uage="0">
-                 <img src="image/selected_9abb014.png">
-             </a>
-             <a class="smallfive smallAll " date="4" judge="0" uage="0">
-                 <img src="image/selected_9abb014.png">
-             </a>
-         </div>
          <div class="bottom">
+             <div class="small">
+                 <div class="smallSum smallSumOne">
+                     <a class="smallone smallAll " date="0"  uage="0">
+                         <img src="image/selected_9abb014.png">
+                     </a>
+                 </div>
+                 <div class="smallSum smallSumTow">
+                     <a class="smalltow smallAll " date="1"  uage="0">
+                         <img src="image/selected_9abb014.png">
+                     </a>
+                 </div>
+                 <div class="smallSum smallSumThree">
+                     <a class="smallthree smallAll " date="2"  uage="0">
+                         <img src="image/selected_9abb014.png">
+                     </a>
+                 </div>
+                 <div class="smallSum smallSumFour">
+                     <a class="smallfour smallAll " date="3"  uage="0">
+                         <img src="image/selected_9abb014.png">
+                     </a>
+                 </div>
+                 <div class="smallSum smallSumFive">
+                     <a class="smallfive smallAll " date="4"  uage="0">
+                         <img src="image/selected_9abb014.png">
+                     </a>
+                 </div>
+                 <!--<a class="smallone smallAll " date="0" judge="0" uage="0">-->
+                     <!--<img src="image/selected_9abb014.png">-->
+                 <!--</a>-->
+             </div>
              <div class="fourthone four1">
                  <h1>琦琦</h1>
                  <p>与自然结下契约的精灵一族，备受万物青睐，天生能操控水与雷电之力。娇小的身躯里，储藏着涤荡掉世上所有黑暗的巨大意志。</p>
@@ -222,6 +527,52 @@
                  <h1>埃尼卡</h1>
                  <p>没有人比她更深谙杀戮的美妙。提着长镰的她，游弋在晨昏交替中，携死神而至。刃上淬满敌人的鲜血，只给对方留下长眠和经久的恐惧。</p>
              </div>
+             <script>
+                 $(function(){
+                     smallArr=[
+                         "image/avatar-1-hover_03dd880.png","image/avatar-4-hover_182aa50.png","image/avatar-3-hover_691928a.png",
+                         "image/avatar-2-hover_561fdca.png","image/avatar-5-hover_b53855b.png"];
+                     smallArr1=[
+                         "image/avatar-1_0788f28.png","image/avatar-4_67ff066.png","image/avatar-3_7f9fe94.png","image/avatar-2_1b49ddc.png","image/avatar-5_79c8db5.png"
+                     ]
+                     $('.smallSum').each(function(){
+                         $(this).hover(function(){
+                             index=$(this).children().attr("date")-(-1);
+                            $(this).children().addClass("small"+index);
+                            $(this).children().children().css({"opacity":"1"});
+                         },function(){
+                             if( $(this).children().attr("uage")=="0"){
+                                 $(this).children().removeClass("small"+index);
+                                 $(this).children().children().css({"opacity":"0"});
+                             }
+                         })
+                         $(this).click(function(){
+                             $(".fourthone").each(function(){
+                                 $(this).attr("uage:0")
+                             })
+                             $(".smallSum img").each(function(){
+                                 $(this).css({"opacity":"0"});
+                             })
+                             $(" .smallAll").each(function(){
+                                 dindex=$(this).attr("date")-(-1);
+                                 $(this).removeClass("small"+dindex);
+                             })
+                                 $(this).children().attr({"uage":"1"});
+
+                             $(this).children().addClass("small"+index);
+                             $(this).children().children().css({"opacity":"1"});
+                             console.log(index);
+                                 $(".fourthone").eq(index-1) .animate({
+                                       opacity:"1"
+                                 },300)
+                             $(".fourthone").not(".four"+index) .animate({
+                                 opacity:"0"
+                             },300)
+
+                         })
+                     })
+                 })
+             </script>
          </div>
          <div class="footer">
              <div class="foot-top footAll">
@@ -255,8 +606,15 @@
              <a id="stopvideo"></a>
          </div>
      </div>
-
  </div>
+ <ul id="navigation" class="navigation">
+     <li class="nav-1 cur"><span></span>首页</li>
+     <li class="nav-2"><span></span>豪礼</li>
+     <li class="nav-3"><span></span>特色</li>
+     <li class="nav-4"><span></span>职业</li>
+ </ul>
+
+ <span class="J_arrow tip-arrow show" style="display: block;"></span>
 </body>
 <script>
 

@@ -3,54 +3,52 @@
  */
 
 window.onload=function(){
-    smallArr=[
-       "image/avatar-1-hover_03dd880.png","image/avatar-2-hover_561fdca.png","image/avatar-3-hover_691928a.png",
-        "image/avatar-4-hover_182aa50.png","image/avatar-5-hover_b53855b.png"];
-    smallArr1=[
-        "image/avatar-1_0788f28.png","image/avatar-2_1b49ddc.png","image/avatar-3_7f9fe94.png","image/avatar-4_67ff066.png","image/avatar-5_79c8db5.png"
-    ]
-    var smallAll=document.getElementsByClassName("smallAll");
-    var fourthone=document.getElementsByClassName("fourthone");
-    for(var smNum=0;smNum<smallAll.length;smNum++){
-        smallAll[smNum].onmouseover=function(){
-           this.getElementsByTagName("img")[0].style="opacity:1";
-            index=this.getAttribute("date");
-            this.style.backgroundImage="url("+smallArr[index]+")";
-            // console.log(smallArr[smNum]);
-        }
-        smallAll[smNum].onmouseout=function(){
-            if(this.getAttribute("uage")=="0"){
-                this.getElementsByTagName("img")[0].style="opacity:0";
-                index=this.getAttribute("date");
-                this.style.backgroundImage="url("+smallArr1[index]+")";
-            }
-        }
-        smallAll[smNum].onclick=function(){
-            index=this.getAttribute("date");
-            for(var k=0;k<smallAll.length;k++){
-                uage=smallAll[k].getAttribute("uage");
-                if(uage=="1"){
-                    smallAll[k].getElementsByTagName("img")[0].style="opacity:0";
-                    smallAll[k].style.backgroundImage="url("+smallArr1[k]+")";
-                    smallAll[k].setAttribute("uage","0");
-                }
-                fourthone[k].style="opacity:0";
+    // window.onscroll=function(e){
+    //     console.log(e)
+    // }
+   //整个页面滚动
+    var wheelArr=[0,-240,-945,-1178,-1890,-2135,-2880,-3268];
+    var wheelnum=0;
+    var wrap=document.getElementById("wrap")[0];
+    var wheeltime1=Date.parse(new Date());
+    var wheeltmie2;
+    wrapPosition=0;
+    var wrap=document.getElementById("wrap");
+    window.onmousewheel=function(e){
+        wheeltime2 = Date.parse(new Date());
+        // console.log(wheeltime2)
+        // console.log(wheeltime1);
+        // console.log(e);
 
+        if(wheeltime2-wheeltime1>0){
+            // console.log(wheeltime2-wheeltime1);
+            wheeltime1=wheeltime2;
+            if(e.deltaY>0){
+                wheelnum++;
+                console.log(wheelArr[wheelnum]);
+                if(wheelnum>7){
+                    wheelnum=7
+                }
+                wrap.style.top=(wheelArr[wheelnum])+"px";
+                wrap.style.transition="all 0.3s";
+                console.log(wheelArr[wheelnum]);
+            }else{
+                wheelnum--;
+                if(wheelnum<0){
+                    wheelnum=0;
+                }
+                wrap.style.top=(wheelArr[wheelnum])+"px";
+                wrap.style.transition="all 0.3s";
             }
-            this.setAttribute("uage","1");
-            fourthone[index].style="opacity:1";
+        }else{
+             return false;
         }
+        return false;
+
     }
-    var svg=document.getElementsByTagName("svg");
-    for(h=0;h<svg.length;h++){
-        svg[h].onmouseover=function(){
-            this.children[1].setAttribute("fill","#ED0303");
-            console.log(this.children[1]);
-        }
-        svg[h].onmouseout=function(){
-            this.children[1].setAttribute("fill","#9e1414");
-        }
-    }
+    $('.navigation li span').first().css({'backgroundPosition':'0px -27px'})
+
+//第三频轮播
     var secondConfirm=document.getElementsByClassName("second_confirm")[0];
   var secondRemove=document.getElementById("secondRemove");
     secondRemove.onclick=function(){
@@ -87,7 +85,7 @@ window.onload=function(){
            NIEOverBottom.style.transitionDelay="0.4s";
            setTimeout(function(){
                NIEOverTop.style="top:55px";
-               console.log(NIEOverTop.style.top);
+               // console.log(NIEOverTop.style.top);
            },1200);
 
        }else{

@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>宁皓网</title>
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+    <style>
+        body{
+            /*min-width: 600px;*/
+            overflow-x: hidden;
+        }
+        *:focus{
+            outline: 0;
+        }
+        .nav-img{
+            margin-top: -4px;
+        }
+        .navulright>li{
+            margin-left: 13px;
+        }
+        .navbutton{
+            margin-top: 9px;
+            padding: 5px 15px!important;
+            color: white!important;
+            background: #158BC6;
+        }
+        .navul1{
+            margin-left: 10px;
+        }
+        .navul1>li{
+            padding-left: 15px;
+        }
+        .navul1>li:first-child{
+            padding-left: 0px;
+        }
+        #search{
+            width: auto;
+            line-height: 1.5;
+            font-size: 14px;
+            margin-left: 30px;
+            margin-top: 9px;
+        }
+        #search input{
+            width: 240px;
+            background: rgba(0,0,0,0.3);
+            border: none;
+            color: #7d7d7d;
+            padding: 6px;
+            box-sizing: border-box;
+            height: 32px;
+            transition: border linear .2s,box-shadow linear .2s;
+            vertical-align: middle;
+        }
+        #search input:focus{
+            width: 255px;
+            box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);
+        }
+        @media (min-width: 998px) {
+            .navbar-toggle {
+                display: none;
+            }
+        }
+        .navbutton:hover{
+            background:rgba(0,0,0,.3)!important;
+            border-radius: 2px;
+        }
+        .navbarbuttonToggle{
+            border: none;
+            background: transparent!important;
+        }
+        .navbarbuttonToggle span{
+            height: 4px;
+        }
+        .navbarbuttonToggle:hover{
+            background: transparent!important;
+        }
+        .navbar{
+            border: none;
+            margin-bottom: 0px;
+        }
+        .jumbotron1img h1{
+            text-align: center;
+            color: #f8f8f8;
+            font-family: "Songti SC",serif;
+            font-weight: lighter;
+            margin-top: 160px;
+            font-size: 60px;
+        }
+        .jumbotron1img p:first-child{
+            color: #f8f8f8;
+            font-size: 40px;
+        }
+        .jumbotron1-video{
+            width: 1536px;
+            height: 743px;
+            position: absolute;
+            z-index: -1;
+
+        }
+        .jumbotron1-video1{
+            width: 1000px;
+            height: 400px;
+            overflow: hidden;
+        }
+        .jumbotron1{
+            width: 100%;
+            background:transparent;
+            background-image: url("grid-white-1.png");
+            position: relative;
+            height: 730px;
+            overflow-y: hidden;
+            overflow-x: hidden;
+            
+        }
+        .jumbotron2{
+            height: 400px;
+        }
+        .jumtext{
+            text-align: center;
+            color: white;
+            font-size: 21px;
+            margin-top: 30px!important;
+            font-weight: 500!important;
+        }
+        .jumtext1{
+            text-align: center;
+            color: white;
+            margin-top: 20px!important;
+            font-size: 13px;
+        }
+        .dingone{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -100px;
+            margin-top: -60px;
+        }
+        /*.dingbtn{*/
+            /*text-align: center;*/
+            /*width: 160px;*/
+            /*height: 40px;*/
+            /*background: #158BC6;!important;*/
+            /*margin-left:25px;*/
+            /*margin-top: 200px;*/
+            /*font-size: 18px;*/
+            /*line-height: 30px;*/
+            /*border: none;*/
+
+        /*}*/
+        .dingbtn{
+            position: absolute;
+            text-align: center;
+            width: 160px;
+            height: 40px;
+            background: #158BC6;!important;
+            margin-left:25px;
+            margin-top: 25px;
+            font-size: 18px;
+            line-height: 30px;
+            border: none;
+
+        }
+        .dingbtn1{
+            position: absolute;
+            text-align: center;
+            width: 160px;
+            height: 40px;
+            margin-left:25px;
+            margin-top: -30px;
+            line-height: 30px;
+            background: #158BC6;!important;
+            /*margin-left:40px;*/
+            /*margin-top: -150px;*/
+            /*font-size: 13px;*/
+            font-size: 18px;
+            /*line-height: 22px;*/
+            border: none;
+
+        }
+        .glyphiconsize{
+            width: 12px;
+            height: 12px;
+            font-size: 8px;
+            position: absolute;
+            left: 50%;
+            margin-left: -6px;
+            margin-top: 80px;
+            text-align: center;
+            opacity: 0.5;
+            display: block;
+        }
+        /*.glyphiconsize1{*/
+            /*width: 12px;*/
+            /*height: 12px;*/
+            /*font-size: 8px;*/
+            /*position: absolute;*/
+            /*left: 50%;*/
+            /*margin-left: -6px;*/
+            /*margin-top: 75px;*/
+            /*text-align: center;*/
+            /*opacity: 0.5;*/
+            /*display: block;*/
+        /*}*/
+        .textall{
+            width: 100%;
+            padding: 18px 0px;
+            background: #DCDDDE;
+            color: #8F8F8F;
+        }
+        .part1 h2{
+            font-size: 38px;
+            margin-top: 80px;
+            text-align: center;
+            font-weight: 200;
+        }
+        .con5{
+            /*margin-bottom: 20px;*/
+        }
+        .part2 p{
+            font-size: 16px;
+            text-align: center;
+            color: #939393;
+            line-height: 28px;
+            margin-top: 22px;
+            font-weight: 100;
+        }
+        .video1{
+            width: 60%;
+        }
+        .video11{
+            width: 90%;
+            margin-left: 5%;
+
+        }
+        .video22{
+            margin-top: 45px;
+            width: 80%!important;
+            margin-left: 10%;
+        }
+        .video2{
+            width: 40%;
+            margin-bottom: 90px;
+        }
+        .video1 video{
+            width: 100%;
+            margin-left: 5%;
+        }
+        .video2 video{
+            margin-right: 15%;
+            width: 60%;
+        }
+        .part3{
+            margin-top: 50px;
+        }
+        .content1{
+            background: #f8f8f8;
+        }
+        .part4img{
+            width: 150px;
+            margin: auto;
+            height: 70px;
+            margin-top: 50px;
+        }
+        .part4img img{
+
+            margin: 0 auto;
+        }
+        h3{
+            text-align: center!important;
+            color: #6F6F6F;
+            font-size: 18px;
+        }
+        .part4 h3:nth-child(3){
+            color: blue;
+        }
+        .part4text{
+            font-size: 16px;
+            text-align: center;
+        }
+        .part4 i{
+            color: #848484;
+        }
+        .part4text{
+            margin-top: 40px;
+            margin-bottom: 60px;
+        }
+        .content3{
+            width: 100%;
+            background: #000000;
+        }
+        .content3one>h2{
+            text-align: right;
+            font-weight: bold;
+            font-size: 25px;
+            color: #A1A1A1;
+            margin-top: 35px;
+        }
+        .content3one{
+            margin-right: 25px;
+        }
+        .content3one>p{
+            text-align: right;
+            color: #A1A1A1;
+            font-size: 16px;
+            margin-top: 35px;
+            opacity: 0.75;
+        }
+        .video3{
+            width:100%
+        }
+        .video3 video{
+            width: 100%
+        }
+        .video3text{
+            text-align: right;
+        }
+        .content3>.part1{
+            padding-top:65px;
+            padding-bottom: 40px;
+        }
+        .xiao{
+            width: 200px;
+            position: absolute;
+            margin-left:-100px;
+            left: 50%;
+            top: -90px;
+        }
+        .conten5p1{
+            font-family: 'Lato','Helvetica Neue','Open Sans',Arial,Helvetica,sans-serif;
+            font-size: 50px!important;
+            font-size: 4rem!important;
+            font-weight: 100!important;
+            line-height: 1em;
+            color: #1b1c1d;
+            text-transform: uppercase;
+            text-align: center
+        }
+        .conten5p2{
+            text-align: center;
+        }
+        .content5text{
+            margin-top: 20px;
+        }
+         .content5{
+            width: 100%;
+             background: #F2F2F2;
+        }
+        .patr7bottom{
+            height: 30px;
+            padding: 5px 0px;
+            background: white;
+        }
+        .part7img{
+            width: 100%;
+            /*margin-top: 20px;*/
+            /*margin-top: 30px;*/
+        }
+        .con5{
+            text-align: center;
+        }
+        .content7part{
+            margin-bottom: 130px;
+        }
+        .content8top h4,.content8bottom h4{
+            position: relative;
+            font-size: 14px;
+            font-weight: bold;
+            color: #9C9C9C;
+        }
+        .content8{
+            background: #232323;
+        }
+        .content8top h4:after,.content8bottom h4:after{
+            content: "";
+            position: absolute;
+            left: 0;
+            z-index: 2;
+            background: url("image/dotted-line.png")repeat;
+        }
+      .content8tleft p{
+          font-size: 60px;
+          font-weight: 100;
+          text-align: left;
+      }
+        .content8tleft{
+            padding: 0!important;
+            text-align: left!important;
+        }
+        .ling{
+            text-align: center!important;
+            color: #2ECC40;
+
+        }
+        .ling1{
+            text-align: right!important;
+            color: white;
+        }
+        .ling2{
+            color: white;
+
+        }
+        ul.contentbmiddle,ul.content8btop{
+            list-style: none!important;
+        }
+        .contentbmiddle li,.content8btop li{
+            margin-left: -40px!important;
+            padding: 4px 0;
+        }
+        .content8btop>li{
+            color: #A1A1A1!important;
+        }
+        .contentbmiddle,.content8btop,.content8bbottom{
+            margin-top: 26px;
+            margin-bottom: 40px;
+        }
+        .content8btop span{
+            padding-right: 5px;
+        }
+        .contentbmiddle>li{
+            color: #A1A1A1!important;
+        }
+        . content8out{
+            margin-top: 40px!important;
+            padding-top: 30px;
+            margin-bottom: 25px;
+        }
+        .content8left, .content8right{
+            margin-top: 20px;
+        }
+        .content9{
+           background: black;
+            opacity: 0.85;
+        }
+        .content9left{
+            text-align: center;
+            list-style: none;
+        }
+        .content9left li{
+            float: left;
+            border-right: 1px solid #333!important;
+            padding: 0px 8px!important;
+            opacity: 0.7;
+            margin: 5px auto
+        }
+
+        .content9right{
+            text-align: right;
+            margin-top: 5px;
+        }
+        .content8out{
+            text-align: center!important;
+        }
+        .ling11,.ling22,.ling00{
+            text-align: center!important;
+        }
+    </style>
+
+</head>
+<body>
+<nav class="navbar navbar-default navbar-color">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle navbarbuttonToggle" data-toggle="collapse"
+                    data-target="#first">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand nav-img" href="#">
+                <img src="logo%20(1).png" width="150">
+            </a>
+        </div>
+        <div class="collapse navbar-collapse" id="first">
+            <ul class="nav navbar-nav  navul1">
+                <li><a href="#">学习</a></li>
+                <li><a href="#">博客</a></li>
+                <li class=""><a>社区</a></li>
+            </ul>
+            <div id="search" class="pull-left">
+                <input type="text"  class="input-group-lg"  placeholder="搜索...">
+            </div>
+            <ul class="nav navbar-nav pull-right navulright">
+                <li><a>登录</a></li>
+                <li><a>注册</a></li>
+                <li class=""><a class="btn btn-primary navbutton">订阅课程</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="jumbotron1">
+    <div class="jumbotron1-video">
+        <video autoplay="" loop="" muted="" style="width: 100%;position: absolute;z-index: -1">
+            <source src="https://ninghao.net/sites/all/themes/ninghao/images/blue_bokeh.mp4" type="video/mp4"></video>
+    </div>
+
+    <div class="container jumbotron1img">
+        <h1>学习应用开发网站</h1>
+        <p class="jumtext">从一个空白模板开始，学习设计与开发漂亮的网站应用</p>
+        <div class="dingone">
+            <a class="btn btn-primary btn-sm dingbtn" role="button">
+                订阅学习<div class="glyphicon glyphicon-chevron-down glyphiconsize"></div>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="textall clearfix">
+    <div class="container">
+        现在可按月与季度订阅，为了决定改变，全力以赴的同学们。👉 点击订阅：）
+    </div>
+</div>
+<div class="content1">
+    <div class="container">
+        <div class="row part1">
+            <div class="col-lg-12  col-sm-12 col-md-12 col-xs-12  ">
+                <h2>实例课程</h2>
+            </div>
+        </div>
+        <div class="row part2">
+            <div class="col-lg-8  col-sm-8 col-md-8 col-xs-10 col-lg-offset-2  col-sm-offset-2 col-md-offset-2 col-xs-offset-1">
+            <p>《网站》是一套原创网页设计课程。 用 Sketch 设计页面，用 Sass 创建样式，包含大量 CSS 技巧，再结合 Semantic UI 框架完成整个页面的布局与功能。</p>
+            </div>
+        </div>
+        <div class="row part3">
+            <div class="col-lg-8 col-sm-12 col-md-8 col-xs-12 video1">
+                <video class="media" src="https://resources.ninghao.net/case/showcase/website-product-desktop.mp4" autoplay="" loop="" poster="https://resources.ninghao.net/case/showcase/website-product-desktop.jpg" controls="">
+            </video>
+            </div>
+            <div class="col-lg-8 col-sm-12 col-md-12 col-xs-12 video2">
+                <video class="media pull-right" src="https://resources.ninghao.net/case/showcase/website-product-mobile-demo.mp4" autoplay="" loop="" poster="https://resources.ninghao.net/case/showcase/website-product-mobile.jpg">
+                </video>
+            </div>
+         </div>
+        </div>
+    </div>
+<div class="content2">
+    <div class="container">
+        <div class="row part1">
+            <div class="col-lg-12  col-sm-12 col-md-12 col-xs-12  ">
+                <h2>构建知识框架</h2>
+            </div>
+        </div>
+        <div class="row part2">
+            <div class="col-lg-8  col-sm-12 col-md-12 col-xs-12 col-lg-offset-2  ">
+                <p>设计界面，准备工具，学习语言，创建应用，搭建服务。我们给您提供了一套不断更新的知识框架。实践你的想法，做出想要的网站或应用。</p>
+            </div>
+        </div>
+        <div class="row part4">
+             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                 <div class="part4img">
+                     <img src="image/drupal.svg">
+                 </div>
+                 <h3>Drupal</h3>
+             </div>
+             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                 <div class="part4img">
+                     <img src="image/wordpress.svg">
+                 </div>
+                 <h3>WordPress</h3>
+             </div>
+             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                 <div class="part4img">
+                     <img src="image/laravel.svg">
+                 </div>
+                 <h3>Laravel</h3>
+             </div>
+             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                 <div class="part4img">
+                     <img src="image/rails.svg">
+                 </div>
+                 <h3>Rails</h3>
+             </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <div class="part4img">
+                    <img src="image/drupal.svg">
+                </div>
+                <h3>Drupal</h3>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <div class="part4img">
+                    <img src="image/wordpress.svg">
+                </div>
+                <h3>WordPress</h3>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <div class="part4img">
+                    <img src="image/laravel.svg">
+                </div>
+                <h3>Laravel</h3>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <div class="part4img">
+                    <img src="image/rails.svg">
+                </div>
+                <h3>Rails</h3>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <div class="part4img">
+                    <img src="image/drupal.svg">
+                </div>
+                <h3>Drupal</h3>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <div class="part4img">
+                    <img src="image/wordpress.svg">
+                </div>
+                <h3>WordPress</h3>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <div class="part4img">
+                    <img src="image/laravel.svg">
+                </div>
+                <h3>Laravel</h3>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <div class="part4img">
+                    <img src="image/rails.svg">
+                </div>
+                <h3>Rails</h3>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <div class="part4img">
+                    <img src="image/drupal.svg">
+                </div>
+                <h3>Drupal</h3>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <div class="part4img">
+                    <img src="image/wordpress.svg">
+                </div>
+                <h3>WordPress</h3>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <div class="part4img">
+                    <img src="image/laravel.svg">
+                </div>
+                <h3>Laravel</h3>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <div class="part4img">
+                    <img src="image/rails.svg">
+                </div>
+                <h3>Rails</h3>
+            </div>
+            <div class="col-lg-12 col-md-12 col-md-12 col-xs-12 part4text">
+                浏览更多&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-angle-right"></i>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="content3">
+    <div class="container part1">
+        <div class="col-lg-4  col-sm-4 col-md-4 col-xs-12">
+            <div class="content3one">
+                <h2>风格统一</h2>
+                <p>适应一个人的说话方式需要一段时间，我们的课程风格是统一的，您会很快适应。</p>
+            </div>
+            <div class="content3one">
+                <h2>废话少</h2>
+                <p>在视频里尽量不说没有必要的废话，直接告诉你想要的内容。节省时间，减轻痛苦。</p>
+            </div>
+            <div class="content3one">
+                <h2>短</h2>
+                <p>一个您从来都没听说过的东西，一两个小时以后，您就知道它是什么，能干什么。</p>
+            </div>
+        </div>
+        <div class="col-lg-8 col-sm-8 col-md-8 col-xs-12">
+            <div class="video3">
+                <video poster="https://ninghao.net/files/screenshot/ninghao-net-00-00-intro.jpg" preload="none">
+                    <source src="https://ninghao.net/system/dynamics/video/ninghao-net-00-00-intro-848940544.mp4" type="video/mp4">
+                    <div>
+                        <h3>不好意思啊，您的浏览器不支持我们的视频：）</h3>
+                    </div>
+                </video>
+            </div>
+            <div class="video3text">
+                宁皓网介绍-《宁皓网》by王皓
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content5">
+    <div class="container">
+        <div class="row part1">
+            <div class="col-lg-12  col-sm-12 col-md-12 col-xs-12  ">
+                <h2>能完成</h2>
+            </div>
+        </div>
+        <div class="row part6">
+            <div class="col-lg-6  col-sm-12 col-md-12 col-xs-12 col-lg-offset-3  con5">
+                <p>我们没有让您一辈子也看不完的视频，并且会定期淘汰一些，现在您只需要完成下面这些：</p>
+            </div>
+            <div class="col-lg-4 col-sm-4 col-md-4 col-xs-12 content5text">
+                <p class="conten5p1">257</p>
+                <p class="conten5p2">课程</p>
+            </div>
+            <div class="col-lg-4 col-sm-4 col-md-4 col-xs-12 content5text">
+                <p class="conten5p1">3,730</p>
+                <p class="conten5p2">视频</p>
+            </div>
+            <div class="col-lg-4 col-sm-4 col-md-4 col-xs-12 content5text">
+                <p class="conten5p1">150</p>
+                <p class="conten5p2">小时</p>
+            </div>
+        </div>
+        <div class="row part3">
+        </div>
+    </div>
+</div>
+<div class="content1">
+   <div class="container">
+       <div class="row part1">
+           <div class="col-lg-12  col-sm-12 col-md-12 col-xs-12  ">
+               <h2>持续更新</h2>
+           </div>
+       </div>
+       <div class="row part2">
+           <div class="col-lg-6  col-sm-12 col-md-12 col-xs-12 col-lg-offset-3  con5">
+               <p>我们认为学习是一个持续的过程 ，不可能一劳永逸，所以我们总会做出一些新鲜东西给你看。</p>
+           </div>
+       </div>
+       <div class="part6 row">
+           <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 col-xs-offset-0 col-sm-offset-0 col-md-offset-0 col-lg-offset-0">
+              <div class="part7img">
+                  <img src="image/nodejs-adonis-mail-showcase.jpg" class="img-responsive classimg">
+                  <div class="patr7bottom">
+                      <span>2018-05-28</span>
+                      <span>19分</span>
+                  </div>
+              </div>
+           </div>
+           <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 col-xs-offset-0 col-sm-offset-0 col-md-offset-0 col-lg-offset-0">
+               <div class="part7img">
+                   <img src="image/nodejs-adonis-pagination-showcase.jpg" class="img-responsive classimg">
+                   <div class="patr7bottom">
+                       <span>2018-05-21</span>
+                       <span>25分</span>
+                   </div>
+               </div>
+           </div>
+           <div class="col-lg-4  col-md-4 col-sm-12 col-xs-12 col-xs-offset-0 col-sm-offset-0 col-md-offset-0 col-lg-offset-0">
+               <div class="part7img">
+                   <img src="image/nodejs-adonis-refactor2-showcase.jpg" class=" img-responsive classimg" >
+                   <div class="patr7bottom">
+                       <span>2018-05-13</span>
+                       <span>21分</span>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </div>
+</div>
+<div class="content1">
+    <div class="container">
+        <div class="row part1">
+            <div class="col-lg-12  col-sm-12 col-md-12 col-xs-12  ">
+                <h2>订阅</h2>
+            </div>
+        </div>
+        <div class="row part2 content7part">
+            <div class="col-lg-8  col-sm-8 col-md-8 col-xs-10 col-lg-offset-2  col-sm-offset-2 col-md-offset-2 col-xs-offset-1">
+                <p>您可以在一年内在线学习所有的过去与未来的课程。</p>
+            </div>
+        </div>
+        <div class="row part3">
+            <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+                <div class="btn btn-primary xiao">现在就去订阅</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content8">
+    <div class="container content8out">
+        <div class="row ">
+            <div class="col-lg-6  col-md-6 col-sm-6 col-xs-12 content8left">
+                <div class="content8top">
+                    <h4>统计</h4>
+                    <div class="col-lg-4 col-sm-4 col-md-4  col-xs-12 content8tleft">
+                        <p class="ling2">9056
+                            <div style="width: 80px;margin: -10px auto ;font-size: 14px;color: #919191">
+                               分钟
+                             </div>
+                        </p>
+                    </div>
+                    <div class="col-lg-4 col-sm-4 col-md-4  col-xs-12 content8tleft">
+                        <p class="ling">1
+                        <div style="width: 110px;margin: -10px auto ;font-size: 14px;color: #919191;text-align: center">
+                            你学会了
+                        </div>
+                        </p>
+                    </div>
+                    <div class="col-lg-4 col-sm-4 col-md-4  col-xs-12  content8tleft">
+                        <p class="ling1">0%
+                        <div style="width:120px;margin: -10px auto ;font-size: 14px;color: #919191 ;text-align: right">
+                            完成
+                        </div>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 content8right">
+                <div class="content8bottom">
+                    <div class="content8rleft col-lg-4">
+                       <h4>社会化网络</h4>
+                        <ul class="content8btop">
+                            <li><span class="fa fa-weibo"></span>微博</li>
+                            <li><span class="fa fa-youtube-play"></span>优酷</li>
+                         <li><span class="fa fa-github"></span>Github</li>
+                            <li><span class="fa fa-qq"></span>53166188</li>
+                            <li><span class="fa fa-weixin"></span>宁浩8080</li>
+                        </ul>
+                    </div>
+                    <div class="content8rmiddle col-lg-4">
+                       <h4>关于</h4>
+                        <ul class="contentbmiddle">
+                            <li><span></span>关于</li>
+                            <li><span></span>故事</li>
+                            <li><span></span>联系</li>
+                            <li><span></span>购物车</li>
+                            <li><span></span>文档</li>
+                        </ul>
+                    </div>
+                    <div class="content8rright col-lg-4 ">
+                       <h4>网络订阅号</h4>
+                        <div class="content8bbottom">
+                            <img src="image/3040.jpg" width="200">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content9">
+    <div class="container ">
+        <div class="row">
+            <div class="col-lg-12 col-md12 col-sm-12 col-xs-12 ">
+                <ul class="content9left">
+                    <li>© 宁皓网</li>
+                    <li>隐私条款</li>
+                    <li>服务条款</li>
+                    <li>浙ICP备12003619号-1</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(function(){
+        var navnum=0;
+//        $("#first ul:eq(0)")
+        $('.navbarbuttonToggle').click(function(){
+            if(navnum==0){
+                navnum=1;
+                $("#search").css({'margin-left':'0px'});
+                $(".navulright>li").css({'margin-left':'0px'})
+                $("#first ul:eq(0)").removeClass("navul1")
+                $("#first ul:eq(1)").removeClass("pull-right");
+                $("#first div:eq(0)").removeClass("pull-left");
+            }else{
+                navnum=0;
+                setTimeout(function(){
+                    $("#search").css({'margin-left':'13px'});
+                    $(".navulright>li").css({'margin-left':'13px'})
+                    $("#first ul:eq(0)").addClass("navul1")
+                    $("#first ul:eq(1)").addClass("pull-right");
+                    $("#first div:eq(0)").addClass("pull-left");
+                },500)
+
+
+            }
+        })
+    })
+</script>
+<script>
+    window.onload=function(){
+        console.log(window.innerHeight)
+    }
+    //当浏览器窗口大小改变时，设置显示内容的高度
+    var srcnum=0;
+   window.onresize=function(e){
+       if(window.innerWidth>768){
+           $('.video1').removeClass('video11');
+           $('.video1 video').css({'margin-left':'5%'});
+           $('.video2 video').css({'margin-right':'15%','width':'60%'});
+           $('.video2').removeClass('video22');
+       }else{
+           $('.video1').addClass('video11');
+           $('.video2').addClass('video22');
+           $('.video1 video').css({'margin-left':'0%'});
+           $('.video2 video').css({'margin-right':'0%','width':'100%'});
+       }
+      if(e.srcElement.innerWidth<=994 && srcnum==0){
+            srcnum=1;
+            $('.ling1').addClass('ling11')
+          $('.ling2').addClass('ling22')
+          $('.ling').addClass('ling00')
+            $('.jumbotron1img>h1').css({'margin-top':'70px','font-size':'30px'});
+            $('.dingbtn').addClass('dingbtn1');
+          $ ('.dingbtn').removeClass('dingbtn');
+          $('.jumtext').css({'display':'none'});
+          $('.glyphiconsize').css({'display':'block'})
+          $('.dingone span').removeClass('glyphiconsize')
+          $(' .jumbotron1').addClass(' jumbotron2')
+          $(' .jumbotron1-video').addClass(' jumbotron1-video1')
+          $('.dingone').css({'margin-top':'-20px'})
+          $('imgclass').css({'width':'100%!important'})
+//          $('.dingone div').addClass('glyphiconsize1')
+//          $('.dingone div').css({'background':'blue'})
+       }else if(e.srcElement.innerWidth>994 && srcnum==1){
+          srcnum=0;
+          $('.ling1').removeClass('ling11')
+          $('.ling2').removeClass('ling22')
+          $('.ling').removeClass('ling00')
+          $('.jumbotron1img>h1').css({'margin-top':'160px','font-size':'80px'})
+          $('.dingbtn1').addClass('dingbtn');
+          $('.dingbtn1').removeClass('dingbtn1');
+          $('.jumtext').css({'display':'block'})
+          $(' .jumbotron1').removeClass(' jumbotron2')
+//          $('.dingone div').removeClass('glyphiconsize1')
+//          $('.dingone div').addClass('glyphiconsize')
+          $(' .jumbotron1-video').removeClass(' jumbotron1-video1')
+          $('imgclass').css({'width':'100%!important'})
+          console.log(0)
+        }else{
+
+      }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<style>
+    .all{
+        width: 90%;
+        height: auto;
+        margin: 20px auto;
+    }
+    .top button{
+        border-style: none;
+        width: 50px;
+        height: 30px;
+        font-size: 14px;
+        line-height: 30px;
+        text-align: center;
+        color: white;
+        border-radius: 5px;
+        outline: 0;
+        margin-right: 10px;
+    }
+    .mytable{
+        width: 80%;
+        border: 1px solid #ccc;
+        margin-top: 20px;
+        border-collapse: collapse;
+    }
+    .mytable tr,.mytable th,.mytable td{
+        border: 1px solid #ccc;
+        height: 30px;
+        line-height: 30px;
+    }
+    .tan{
+        width: 600px;
+        height: 600px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        display: none;
+        margin-left: -300px;
+        margin-top: -320px;
+        background: white;
+        border-radius: 5px;
+    }
+    .myrow{
+        margin-top: 15px;
+        margin-left: 15px;
+        height: 40px;
+        clear: both;
+        color: #cccccc;
+        line-height: 40px;
+    }
+    .myrow select{
+        border-radius: 3px;
+        padding: 3px;
+    }
+    .myrow input{
+        border-radius: 3px;
+        padding: 3px;
+        border-style: none;
+        border: 1px solid #cccccc;
+        margin-left: 3px;
+        outline: 0;
+    }
+    .myrow label{
+        width: 30px;
+    }
+    .rowleft{
+        width: 250px;
+        height: 30px;
+        float: left;
+    }
+    .rowright{
+        width: 250px;
+        height: 30px;
+        float: left;
+
+    }
+    .last{
+        width: 120px;
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+    }
+    .last button{
+        width: 40px;
+        height: 25px;
+        line-height: 25px;
+        font-size: 13px;
+        border:none;
+        color: white;
+        outline: 0;
+        border-radius: 3px;
+        margin-right: 5px;
+    }
+    .searchdelete button{
+        width: 40px;
+        height: 25px;
+        border: none;
+        outline: 0;
+        line-height: 25px;
+        border-radius: 3px;
+        color: white;
+        margin-right: 5px;
+    }
+    .tantop{
+        height: 520px;
+        overflow-y: scroll;
+    }
+    .special{
+        width: 100px;
+    }
+</style>
+<body>
+<div class="all">
+    <div class="top">
+        <button class="add">新增</button>
+        <button class="change">修改</button>
+        <button class="delete">删除</button>
+    </div>
+    <div class="bottom">
+        <table class="mytable">
+            <tr>
+                <th>监控编号</th>
+                <th>项目名称</th>
+                <th>PM2.5报警值</th>
+                <th>PM10报警值</th>
+                <th>租赁开始时间</th>
+                <th>租赁到期时间</th>
+                <th>安装时间</th>
+                <th>安装位置</th>
+            </tr>
+        </table>
+    </div>
+    <div class="tan">
+        <div class="tantop">
+            <div class="searchdelete">
+                <div class="myrow">
+                    <label>监控编号</label>
+                    <input type="text" id="monitornumberone">
+                </div>
+                <div class="myrow">
+                    <label>项目名称</label>
+                    <input type="text" id="projectnameone">
+                </div>
+                <div class="myrow">
+                    <label>企业名称</label>
+                    <input type="text" id="homenameone">
+                </div>
+                <div class="myrow">
+                    <button>查询</button>
+                    <button>删除</button>
+                </div>
+            </div>
+            <div class="showt">
+                <div class="myrow">
+                    <div class="rowleft">
+                        <label>监控编号</label>
+                        <input type="text" id="monitornumber">
+                    </div>
+                    <div class="rowright">
+                        <label>项目名称</label>
+                        <input type="text" id="projectname">
+                    </div>
+                </div>
+                <div class="myrow">
+                    <div class="rowleft">
+                        <label>企业名称</label >
+                        <input type="text" id="homename">
+                    </div>
+                    <div class="rowright">
+                        <label>PM2.5报警值</label>
+                        <input type="text" class="special" id="PM2.5">
+                    </div>
+                </div>
+                <div class="myrow">
+                    <div class="rowleft">
+                        <label>PM10报警值</label>
+                        <input type="text" class="special" id="PM10">
+                    </div>
+                    <div class="rowright">
+                        <label>租赁开始时间</label>
+                        <input type="date" id="Leasestarttime">
+                    </div>
+                </div>
+                <div class="myrow">
+                    <div class="rowleft">
+                        <label>租赁到期时间</label>
+                        <input type="date" id="leaseexpirationtime">
+                    </div>
+                    <div class="rowright">
+                        <label>安装时间</label>
+                        <input type="date" id="installtime">
+                    </div>
+                </div>
+                <div class="myrow">
+                    <div class="rowleft">
+                        <label>安装位置</label>
+                        <input type="text" id="installposition">
+                    </div>
+                    <div class="rowright">
+                        <!--<label>密码</label>-->
+                        <!--<input type="password">-->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="myrow last">
+            <button>取消</button>
+            <button>保存</button>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    $(function(){
+        $(".add").click(function(){
+            $(".tan").css({"display":"block"})
+            $(".searchdelete").css({"display":"none"})
+            $(".showt").css({"display":"block"})
+        })
+        $(".change").click(function(){
+            $(".tan").css({"display":"block"})
+            $(".searchdelete").css({"display":"block"})
+            $(".showt").css({"display":"none"})
+        })
+        $(".delete").click(function(){
+            $(".tan").css({"display":"block"})
+            $(".searchdelete").css({"display":"block"})
+            $(".showt").css({"display":"none"})
+        })
+    })
+    $(".last button").click(function(){
+        $(".tan").css({"display":"none"})
+    })
+</script>
+</html>

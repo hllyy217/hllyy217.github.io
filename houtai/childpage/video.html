@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .all{
+        width: 90%;
+        height: auto;
+        margin: 20px auto;
+    }
+    .top button{
+        border-style: none;
+        width: 50px;
+        height: 30px;
+        font-size: 14px;
+        line-height: 30px;
+        text-align: center;
+        color: white;
+        border-radius: 5px;
+        outline: 0;
+        margin-right: 10px;
+    }
+    .mytable{
+        width: 80%;
+        border: 1px solid #ccc;
+        margin-top: 20px;
+        border-collapse: collapse;
+    }
+    .mytable tr,.mytable th,.mytable td{
+        border: 1px solid #ccc;
+        height: 30px;
+        line-height: 30px;
+    }
+    .tan{
+        width: 600px;
+        height: 600px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        display: none;
+        margin-left: -300px;
+        margin-top: -320px;
+        background: white;
+        border-radius: 5px;
+    }
+    .myrow{
+        margin-top: 15px;
+        margin-left: 15px;
+        height: 40px;
+        clear: both;
+        color: #cccccc;
+        line-height: 40px;
+    }
+    .myrow select{
+        border-radius: 3px;
+        padding: 3px;
+    }
+    .myrow input{
+        border-radius: 3px;
+        padding: 3px;
+        border-style: none;
+        border: 1px solid #cccccc;
+        margin-left: 3px;
+        outline: 0;
+    }
+    .myrow label{
+        width: 30px;
+    }
+    .rowleft{
+        width: 250px;
+        height: 30px;
+        float: left;
+    }
+    .rowright{
+        width: 250px;
+        height: 30px;
+        float: left;
+
+    }
+    .last{
+        width: 120px;
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+    }
+    .last button{
+        width: 40px;
+        height: 25px;
+        line-height: 25px;
+        font-size: 13px;
+        border:none;
+        color: white;
+        outline: 0;
+        border-radius: 3px;
+        margin-right: 5px;
+    }
+    .searchdelete button{
+        width: 40px;
+        height: 25px;
+        border: none;
+        outline: 0;
+        line-height: 25px;
+        border-radius: 3px;
+        color: white;
+        margin-right: 5px;
+    }
+    .tantop{
+        height: 520px;
+        overflow-y: scroll;
+    }
+    .special{
+        width: 100px;
+    }
+</style>
+<body>
+<div class="all">
+    <div class="top">
+        <button class="add">新增</button>
+        <button class="change">修改</button>
+        <button class="delete">删除</button>
+    </div>
+    <div class="bottom">
+        <table class="mytable">
+            <tr>
+                <th>状态绑定</th>
+                <th>项目名称</th>
+                <th>企业名称</th>
+                <th>设备S/N号</th>
+                <th>安装位置</th>
+            </tr>
+        </table>
+    </div>
+    <div class="tan">
+        <div class="tantop">
+            <div class="searchdelete">
+                <div class="myrow">
+                    <label>项目名称</label>
+                    <input type="text">
+                </div>
+                <div class="myrow">
+                    <label>企业名称</label>
+                    <input type="text">
+                </div>
+                <div class="myrow">
+                    <label>设备S/N号</label>
+                    <input type="text">
+                </div>
+                <div class="myrow">
+                    <button>查询</button>
+                    <button>删除</button>
+                </div>
+            </div>
+            <div class="showt">
+                <div class="myrow">
+                    <div class="rowleft">
+                        <label>项目名称</label>
+                        <input type="text">
+                    </div>
+                    <div class="rowright">
+                        <label>企业名称</label>
+                        <input type="text">
+                    </div>
+                </div>
+                <div class="myrow">
+                    <div class="rowleft">
+                        <label>设备S/N号</label>
+                        <input type="text">
+                    </div>
+                    <div class="rowright">
+                        <label>云反馈标识码</label>
+                        <input type="text" class="special">
+                    </div>
+                </div>
+                <div class="myrow">
+                    <div class="rowleft">
+                        <label>绑定状态</label>
+                        <input type="text" >
+                    </div>
+                    <div class="rowright" >
+                        <label>云反馈消息</label>
+                        <input type="date" class="special">
+                    </div>
+                </div>
+                <div class="myrow">
+                    <div class="rowleft">
+                        <label>安装位置</label>
+                        <input type="text">
+                    </div>
+                    <div class="rowright">
+                        <label>视频直播地址</label>
+                        <input type="text" class="special">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="myrow last">
+            <button>取消</button>
+            <button>保存</button>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    $(function(){
+        $(".add").click(function(){
+            $(".tan").css({"display":"block"})
+            $(".searchdelete").css({"display":"none"})
+            $(".showt").css({"display":"block"})
+        })
+        $(".change").click(function(){
+            $(".tan").css({"display":"block"})
+            $(".searchdelete").css({"display":"block"})
+            $(".showt").css({"display":"none"})
+        })
+        $(".delete").click(function(){
+            $(".tan").css({"display":"block"})
+            $(".searchdelete").css({"display":"block"})
+            $(".showt").css({"display":"none"})
+        })
+    })
+    $(".last button").click(function(){
+        $(".tan").css({"display":"none"})
+    })
+</script>
+</html>

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcss.com/distpicker/2.0.3/distpicker.js"></script>
+    <script>
+        var usermanagebaeurl=""
+    </script>
+</head>
+<style>
+    .all{
+      width: 90%;
+        height: auto;
+        margin: 20px auto;
+  }
+    .manageuser{
+        /*display: none;*/
+    }
+    .top button{
+        border-style: none;
+        width: 50px;
+        height: 30px;
+        font-size: 14px;
+        line-height: 30px;
+        text-align: center;
+        color: white;
+        border-radius: 5px;
+        outline: 0;
+        margin-right: 10px;
+    }
+    .mytable{
+        width: 80%;
+        border: 1px solid #ccc;
+        margin-top: 20px;
+        border-collapse: collapse;
+    }
+    .mytable tr,.mytable th,.mytable td{
+        border: 1px solid #ccc;
+        height: 30px;
+        line-height: 30px;
+    }
+    .tan{
+        width: 600px;
+        height: 600px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        display: none;
+        margin-left: -300px;
+        margin-top: -320px;
+        background: white;
+        border-radius: 5px;
+    }
+  .myrow{
+      margin-top: 15px;
+      margin-left: 15px;
+      height: 40px;
+      clear: both;
+      color: #cccccc;
+      line-height: 40px;
+  }
+  .myrow select{
+      border-radius: 3px;
+      padding: 3px;
+  }
+  .myrow input{
+      border-radius: 3px;
+      padding: 3px;
+      border-style: none;
+      border: 1px solid #cccccc;
+      margin-left: 3px;
+      outline: 0;
+  }
+    .myrow label{
+        width: 30px;
+    }
+    .rowleft{
+       width: 250px;
+        height: 30px;
+        float: left;
+    }
+    .rowright{
+        width: 250px;
+        height: 30px;
+        float: left;
+
+    }
+    .last{
+        width: 120px;
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+    }
+    .last button{
+        width: 40px;
+        height: 25px;
+        line-height: 25px;
+        font-size: 13px;
+        border:none;
+        color: white;
+        outline: 0;
+        border-radius: 3px;
+        margin-right: 5px;
+    }
+    .searchdelete button{
+        width: 40px;
+        height: 25px;
+        border: none;
+        outline: 0;
+        line-height: 25px;
+        border-radius: 3px;
+        color: white;
+        margin-right: 5px;
+    }
+    .disrow{
+        display: none;
+    }
+    .distpicker select{
+        margin-right: 20px!important;
+    }
+</style>
+<body>
+ <div class="all">
+     <div class="top">
+         <button class="add">新增</button>
+         <button class="change">修改</button>
+         <button class="delete">删除</button>
+     </div>
+     <div class="bottom">
+         <table class="mytable">
+             <tr >
+                 <!--<th>用户类型</th>-->
+                 <th>手机号</th>
+                 <th>单位名称</th>
+                 <th class="manageuser">行政级别</th>
+                 <th>行政区域</th>
+             </tr>
+             <tr class="addusermanage"></tr>
+         </table>
+     </div>
+ </div>
+<div class="tan">
+    <div class="tantop">
+        <div class="searchdelete">
+            <div class="myrow">
+                <label>单位名称</label>
+                <input type="text">
+            </div>
+            <div class="myrow">
+                <label>手机号</label>
+                <input type="text">
+            </div>
+            <div class="myrow">
+                <label>用户类型</label>
+                <select>
+                    <option>施工单位</option>
+                    <option>监理单位</option>
+                    <option>租赁单位</option>
+                    <option>主管部门</option>
+                </select>
+            </div>
+            <div class="myrow">
+                <button>查询</button>
+                <button>删除</button>
+            </div>
+        </div>
+        <div class="showt">
+            <div class="myrow">
+                <div class="rowleft">
+                    <label>用户类型</label>
+                    <select class="userm" name="userm">
+                        <option>施工单位</option>
+                        <option>监理单位</option>
+                        <option>租赁单位</option>
+                        <option>主管部门</option>
+                    </select>
+                </div>
+                <div class="rowright">
+                </div>
+            </div>
+            <div class="myrow">
+                <div class="rowleft">
+                    <label>手机号</label>
+                    <input type="text" name="phone">
+                </div>
+                <div class="rowright">
+                    <label>密码</label>
+                    <input type="password" name="password">
+                </div>
+            </div>
+            <div class="myrow disrow">
+                <!--<div data-toggle="distpicker">-->
+                    <label>行政级别</label>
+                    <select name="provincej">
+                        <option   selected>省级</option>
+                        <option >市级</option>
+                        <option >县级</option>
+                    </select>
+                    <!--<select data-province="浙江省" id="provinceone"></select>-->
+                    <!--<select data-city="杭州市" id="cityone"></select>-->
+                    <!--<select data-district="西湖区" id="districtone"></select>-->
+                <!--</div>-->
+            </div>
+            <div class="myrow">
+                <div data-toggle="distpicker">
+                    <label>行政区域</label>
+                    <select data-province="浙江省" name="province"></select>
+                    <select data-city="杭州市" name="city"></select>
+                    <select data-district="西湖区" name="district"></select>
+                </div>
+            </div>
+            <div class="myrow">
+                <div class="rowleft">
+                    <label>单位地址</label>
+                    <input type="text" name="address">
+                </div>
+                <div class="rowright">
+                    <label>备注</label>
+                    <input type="password" name="remark">
+                </div>
+            </div>
+            <div class="myrow">
+                <input type="file" multiple style="outline: 0;border: none" name="fileimg">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="myrow last">
+        <button>取消</button>
+        <button id="remain">保存</button>
+    </div>
+    <!--<div class="myrow"></div>-->
+</div>
+</body>
+<script>
+    $(function(){
+        var baseurl=""
+   $(".add").click(function(){
+       $(".tan").css({"display":"block"})
+       $(".searchdelete").css({"display":"none"})
+       $(".showt").css({"display":"block"})
+   })
+        $(".change").click(function(){
+            $(".tan").css({"display":"block"})
+            $(".searchdelete").css({"display":"block"})
+            $(".showt").css({"display":"none"})
+        })
+        $(".delete").click(function(){
+            $(".tan").css({"display":"block"})
+            $(".searchdelete").css({"display":"block"})
+            $(".showt").css({"display":"none"})
+        })
+        $('#target').distpicker({
+            province: '浙江省',
+            city: '杭州市',
+            district: '西湖区'
+        });
+        var nnn="&mobile=admin&password=risit654321"
+        // http://www.zutd.com.cn:8094/v/equip/queryTowerRealtimeList?status=5&projectId=&monitorId=&queryFilter=&pageNum=1&pageSize=6
+   //显示页面数据
+        $.ajax({
+            url:"http://121.42.34.181:8094/v/user/login?mobile=admin+&password=password",
+            // date:"",
+            // dataType:"",
+            type:"GET",
+            success:function(data){
+                // var datad=data.response;
+                // if(data.response.message="success"){
+                //     //判断用户类型是主管部门的话就显示数据否则不显示用户管理数据
+                //     //设置缓存防止用户直接从其他页面登录cookie
+                //     if(datad.power){
+                //         console.log(datad.power)
+                //         cookstr="name="+username+";power="+datad.power;
+                //         document.cookie=cookstr
+                //         console.log(document.cookie)
+                //     }else{
+                //         document.cookie="name="+username
+                //     }
+                //     // console.log(data.response)
+                //     window.location.href="index.html"
+                // }else{
+                //     var text=data.response.message;
+                //     $(".userno").text(text)
+                // }
+            },
+            error:function(){
+
+            }
+
+
+        })
+        $.ajax({
+            type:"GET",
+            url:"http://121.42.34.181:8094/v/competentDepartment/listCompetentDepartment?&pageNum=1&pageSize=10",
+            // dataType:"json",
+            crossDomain: true,
+            xhrFields: {
+                withCredentials: true
+            },
+            success:function(data){
+               console.log(data)
+                length=data.response.length;
+               console.log(length)
+               //ajax 分页
+               var htmls="";
+               var trhml=""
+                var pattern1 = /00/;
+                var pattern2 = /000/;
+                var pattern3 = /0000/;
+                var pattern4 = /00000/;
+                for(var i=0;i<length;i++){
+                   //border: 1px solid #ccc;
+                    str = data.response[i].precinct;
+                    if(pattern4.test(str)||pattern3.test(str)) {
+                        var prec="省级"
+                    }else if(pattern2.test(str)){
+                        var prec="市级"
+                    }else{
+                        var prec="县级"
+                    }
+                    // }else if(pattern3.text(str)){
+                    //     console.log(2)
+                    // }else{
+                    //     console.log(3)
+                    // }
+                   //  height: 30px;
+
+                    // console.log(pattern1.test(str));
+                   //  if(data.response[i].precinct.search("0"))
+                   //  line-height: 30px;
+                   // console.log(data.response[i].mobile)
+                   trhml="<td style=''>"+data.response[i].mobile+"</td>"+"<td>"+data.response[i].managerName+"</td>"+
+                       "<td>"+prec+"</td>"+
+                       "<td>"+data.response[i].managerName+"</td>";
+                   htmls+="<tr style='text-align: center'>"+trhml+"</tr>"
+
+                }
+              $(".addusermanage").before(htmls)
+            },
+            error:function (e) {
+                     console.log(e.message)
+            }
+
+        })
+        //新增数据
+        //修改
+        //删除
+        // function cerateobject(){
+        //
+        // }
+        $("#remain").click(function(){
+            parArr = {};
+            var name = $('input[name=name]').val()
+            parArr.name = name;
+            var password = $('input[name=password]').val()
+            parArr.password = password;
+            var projectj = $('input[name=projectj]').val()
+            parArr.name = name;
+            var province = $('input[name=province]').val()
+            var city = $('input[name=city]').val()
+            var district = $('input[name=district]').val()
+            parArr.district = province+city+district
+            var address = $('input[name=address]').val()
+            parArr.address = address;
+            var params = JSON.stringify(parArr);
+            $.ajax({
+                type:"POST",
+                // url:"http://121.42.34.181:8094/v/competentDepartment/listCompetentDepartment?pageNum=1&pageSize=10",
+                data:params,
+                dataType:"",
+                // crossDomain: true,
+                // xhrFields: {
+                //     withCredentials: true
+                // },
+                success:function(){
+                    console.log(1)
+                },
+                error:function () {
+
+                }
+
+            })
+        })
+    //数据交互
+
+    })
+    $(".last button").click(function(){
+        $(".tan").css({"display":"none"})
+    })
+    // $(".userm").change(function(){
+    //     console.log(1)
+    // })
+    $(".userm").change(function () {
+        if($(".userm").val()=="主管部门"){
+            $('.disrow').css({"display":"block"})
+        }else{
+            $('.disrow').css({"display":"none"})
+        }
+
+    })
+
+</script>
+</html>

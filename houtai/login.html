@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        var baseurl="http://121.42.34.181:8094/"
+    </script>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background: rebeccapurple;
+        }
+        .login{
+            width: 400px;
+            height: 300px;
+            background: white;
+            border-radius: 8px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -200px;
+            margin-top: -150px;
+        }
+        .usermanage,.password,.bottom,.code{
+            width: 320px;
+            font-size: 20px;
+            height: 40px;
+            margin: 20px auto;
+        }
+        .code{
+            display: block;
+        }
+        input{
+            width: 200px;
+            padding: 6px;
+            border-style: none;
+            border-radius: 3px;
+            border: 1px solid black;
+        }
+        button{
+            width: 100px;
+            margin-right: 20px;
+            border:none;
+            height: 30px;
+            line-height: 30px;
+            outline: 0;
+        }
+        .userno{
+            font-size: 10px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+  <div class="login">
+      <div class="usermanage">
+          <label>手机号&nbsp;</label>
+          <input type="text" name="username">
+          <span class="userno"></span>
+      </div>
+      <div class="password">
+          <label>密码&nbsp;&nbsp;&nbsp;&nbsp;</label>
+          <input type="password" name="password">
+      </div>
+      <div class="code">
+          <label>验证码&nbsp;</label>
+          <input type="text" name="numcode">
+      </div>
+      <div class="bottom">
+          <button class="admin">登录</button>
+          <button class="reset">重置</button>
+      </div>
+  </div>
+</body>
+<script>
+    //mobile=admin&password=risit654321
+ $(".admin").click(function(){
+     var username=$("[name=username]").val();
+     var password=$("[name=password]").val();
+     console.log(password)
+     var urllogin=baseurl+"/v/user/login?"+"mobile="+username+"&password="+password;
+     console.log(urllogin)
+
+
+
+     $.ajax({
+         url:urllogin,
+         crossDomain: true,
+         xhrFields: {
+             withCredentials: true
+         },
+         type:"GET",
+         success:function(data){
+            var datad=data.response;
+             if(data.response.message="success"){
+                 //判断用户类型是主管部门的话就显示数据否则不显示用户管理数据
+                 //设置缓存防止用户直接从其他页面登录cookie
+                 if(datad.power){
+                     console.log(datad.power)
+                    cookstr="JSESSIONID=BaSTXJZZ5FY-84hpmrmlWFE5arjNCeiIgAxqjtVu";
+                     document.cookie=cookstr;
+                     console.log(document.cookie)
+                 }else{
+                     document.cookie="name="+username
+                 }
+                 // console.log(data.response)
+                window.location.href="index.html"
+             }else{
+                 var text=data.response.message;
+                 $(".userno").text(text)
+             }
+         },
+         error:function(){
+
+         }
+
+
+ })
+ })
+ $(".reset").click(function(){
+
+ })
+</script>
+</html>

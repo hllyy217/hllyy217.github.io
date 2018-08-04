@@ -1,0 +1,20 @@
+$(function(){
+    $(".add").click(function(){
+        $(".tan").css({"display":"block"})
+        $(".searchdelete").css({"display":"none"})
+        $(".showt").css({"display":"block"})
+    })
+    $(".change").click(function(){
+        $(".tan").css({"display":"block"})
+        $(".searchdelete").css({"display":"block"})
+        $(".showt").css({"display":"none"})
+    })
+    $(".delete").click(function(){
+        $(".tan").css({"display":"block"})
+        $(".searchdelete").css({"display":"block"})
+        $(".showt").css({"display":"none"})
+    })
+})
+$(".last button").click(function(){
+    $(".tan").css({"display":"none"})
+})

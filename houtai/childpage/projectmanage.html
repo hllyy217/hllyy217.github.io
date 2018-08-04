@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcss.com/distpicker/2.0.3/distpicker.js"></script>
+</head>
+<style>
+    .all{
+        width: 90%;
+        height: auto;
+        margin: 20px auto;
+    }
+    .top button{
+        border-style: none;
+        width: 50px;
+        height: 30px;
+        font-size: 14px;
+        line-height: 30px;
+        text-align: center;
+        color: white;
+        border-radius: 5px;
+        outline: 0;
+        margin-right: 10px;
+    }
+    .mytable{
+        width: 80%;
+        border: 1px solid #ccc;
+        margin-top: 20px;
+        border-collapse: collapse;
+    }
+    .mytable tr,.mytable th,.mytable td{
+        border: 1px solid #ccc;
+        height: 30px;
+        line-height: 30px;
+    }
+    .tan{
+        width: 600px;
+        height: 600px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        display: none;
+        margin-left: -300px;
+        margin-top: -320px;
+        background: white;
+        border-radius: 5px;
+    }
+    .myrow{
+        margin-top: 15px;
+        margin-left: 15px;
+        height: 40px;
+        clear: both;
+        color: #cccccc;
+        line-height: 40px;
+    }
+    .myrow select{
+        border-radius: 3px;
+        padding: 3px;
+    }
+    .myrow input{
+        border-radius: 3px;
+        padding: 3px;
+        border-style: none;
+        border: 1px solid #cccccc;
+        margin-left: 3px;
+        outline: 0;
+    }
+    .myrow label{
+        width: 30px;
+    }
+    .rowleft{
+        width: 250px;
+        height: 30px;
+        float: left;
+    }
+    .rowright{
+        width: 250px;
+        height: 30px;
+        float: left;
+
+    }
+    .last{
+        width: 120px;
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+    }
+    .last button{
+        width: 40px;
+        height: 25px;
+        line-height: 25px;
+        font-size: 13px;
+        border:none;
+        color: white;
+        outline: 0;
+        border-radius: 3px;
+        margin-right: 5px;
+    }
+    .searchdelete button{
+        width: 40px;
+        height: 25px;
+        border: none;
+        outline: 0;
+        line-height: 25px;
+        border-radius: 3px;
+        color: white;
+        margin-right: 5px;
+    }
+
+    .tantop{
+        height: 520px;
+        overflow-y: scroll;
+    }
+</style>
+<body>
+<div class="all">
+    <div class="top">
+        <button class="add">新增</button>
+        <button class="change">修改</button>
+        <button class="delete">删除</button>
+    </div>
+    <div class="bottom">
+        <table class="mytable">
+            <tr>
+                <th>项目名称</th>
+                <th>公司名称</th>
+                <th>项目地址</th>
+                <th>省市区</th>
+                <th>项目经理</th>
+            </tr>
+        </table>
+    </div>
+    <div class="tan">
+        <div class="tantop">
+            <div class="searchdelete">
+                <div class="myrow">
+                    <label>项目名称</label>
+                    <input type="text">
+                </div>
+                <div class="myrow">
+                    <label>公司名称</label>
+                    <input type="text">
+                </div>
+                <div class="myrow">
+                    <button>查询</button>
+                    <button>删除</button>
+                </div>
+            </div>
+            <div class="showt">
+                <div class="myrow">
+                    <div class="rowleft">
+                        <label>项目名称</label>
+                        <input type="text">
+                    </div>
+                    <div class="rowright">
+                        <label>公司名称</label>
+                        <input type="text">
+                    </div>
+                </div>
+                <div class="myrow">
+                    <div class="rowleft">
+                        <label>开工日期</label>
+                        <input type="date">
+                    </div>
+                    <div class="rowright">
+                        <label>竣工日期</label>
+                        <input type="date">
+                    </div>
+                </div>
+                <div class="myrow">
+                        <label>项目地址</label>
+                        <input type="text">
+                    </div>
+                <div class="myrow ">
+                    <div data-toggle="distpicker">
+                        <label>行政级别</label>
+                        <select data-province="浙江省"></select>
+                        <select data-city="杭州市"></select>
+                        <select data-district="西湖区"></select>
+                    </div>
+                </div>
+                <div class="myrow">
+                    <div class="rowleft">
+                        <label>设备数量</label>
+                        <input type="text">
+                    </div>
+                    <div class="rowright">
+                        <label>经度&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                        <input type="text">
+                    </div>
+                </div>
+                <div class="myrow">
+                    <div class="rowleft">
+                        <label>纬度&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                        <input type="text">
+                    </div>
+                    <div class="rowright">
+                        <label>监理单位</label>
+                        <input type="password">
+                    </div>
+                </div>
+                <div class="myrow">
+                    <div class="rowleft">
+                        <label>项目经理</label>
+                        <input type="text">
+                    </div>
+                    <div class="rowright">
+                        <label>监理单位</label>
+                        <input type="password">
+                    </div>
+                </div>
+                <div class="myrow">
+                    <div class="rowleft">
+                        <label>备注&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                        <input type="text">
+                    </div>
+                </div>
+                </div>
+
+            </div>
+        <div class="myrow last">
+            <button>取消</button>
+            <button>保存</button>
+        </div>
+        </div>
+
+        <!--<div class="myrow"></div>-->
+    </div>
+</div>
+</body>
+<script>
+    $(function(){
+
+        $(".add").click(function(){
+            console.log(2)
+            $(".tan").css({"display":"block"})
+            $(".searchdelete").css({"display":"none"})
+            $(".showt").css({"display":"block"})
+        })
+        $(".change").click(function(){
+            $(".tan").css({"display":"block"})
+            $(".searchdelete").css({"display":"block"})
+            $(".showt").css({"display":"none"})
+        })
+        $(".delete").click(function(){
+            $(".tan").css({"display":"block"})
+            $(".searchdelete").css({"display":"block"})
+            $(".showt").css({"display":"none"})
+        })
+        $('#target').distpicker({
+            province: '浙江省',
+            city: '杭州市',
+            district: '西湖区'
+        });
+    })
+    $(".last button").click(function(){
+        $(".tan").css({"display":"none"})
+    })
+</script>
+</html>
